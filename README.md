@@ -13,7 +13,7 @@ In this project you will build a homemade, web-based music player that resembles
 
 ### 0. Fork this Repository
 
-Create your own fork of this repo to do your work. You do NOT need to submit a pull request back to the upstream; simply track your code and push/pull back to your own fork.
+Create your own fork of this repo to track your work. You do not need to submit a pull request back to the upstream; simply track your code and push/pull back to your own fork.
 
 ### 1. Project Resources
 
@@ -130,6 +130,8 @@ Put your song bundles in a separate `songs` directory within your project but do
 ## STEP TWO - Deploy your CloudFormation stack
 
 Open the link below in a new browser tab:
+
+**BE SURE TO LAUNCH YOUR STACK IN THE `us-east-1` REGION WITHIN AWS.** This will not deploy in another region.
 
 [![S3 Bucket served through CloudFront cache](https://raw.githubusercontent.com/nmagee/aws-snippets/main/images/launch-stack.png)](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?stackName=dp1&templateURL=https://s3.amazonaws.com/ds2022-resources/dp/dp1-fullstack.yaml) - Data Project 1 Resources [Template](templates/dp1-fullstack.yaml)
 
