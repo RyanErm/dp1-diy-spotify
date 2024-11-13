@@ -125,7 +125,7 @@ GENRE = 1
 # try to insert the song into the database
 try:
     add_song = ("INSERT INTO songs "
-            "(title, album, artist, year, file, image, genre) "
+            "(title, album, artist, year, genre) "
             "VALUES (%s, %s, %s, %s, %s)")
     song_vals = (TITLE, ALBUM, ARTIST, YEAR, GENRE)
     cur.execute(add_song, song_vals)
