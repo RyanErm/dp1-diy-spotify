@@ -115,7 +115,7 @@ Each song's metadata file must contain five data points: `title`, `album`, `arti
 
 - - -
 
-Your first task is to collect at least ten (10) songs and create their associated metadata files.
+Your first task is to collect at least ten (10) songs and create their associated metadata files. You can create these by hand - gathering the right MP3 file and image, and hand-typing the JSON metadata file.
 
 1. **MP3 files** - can be created from YouTube videos using tools such as [this](https://ezmp3.cc/).
 2. **Metadata JSON files** - can be written by hand using the schema above.
@@ -276,7 +276,7 @@ Find the password value from Canvas and set it in your local environment using t
 export DBPASS='xxxxxxxxx'
 ```
 
-> **NOTE:** There is a dollar sign `$` in the password, which as a special character can be misread. The way to avoid this is by escaping it with a backslash immediately before the character. So instead of `$` escape it with `\$`.
+> **NOTE:** There is a dollar sign `$` in the password, which as a special character can be misread. The way to avoid this is by escaping it with a backslash immediately before the character. So instead of `$` escape it with `\$`. You may want to consider using the alternate credentials givin in Canvas so that you don't have to worry about this.
 
 Finally, bring all of these elements together into a single DB connection string, and create a cursor using that:
 
@@ -596,3 +596,12 @@ While completing the points above will earn up to 15 points total, you can have 
 
 - If you commit database credentials to git/GitHub and push them, you will lose 3 points.
 - If songs appear in your web interface but cannot be played, you will lose 1 point.
+
+
+## Cleanup
+
+**After your project is graded** (once you receive your grade in Canvas), tearing down your solution is simple:
+
+1. Save/commit any code you want to save. Be careful NOT to commit any passwords or credentials.
+2. [Empty your S3 bucket](https://us-east-1.console.aws.amazon.com/s3/home?region=us-east-1) using either the CLI or the AWS Console.
+3. [Delete the CloudFormation stack](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/?filteringText=&filteringStatus=active&viewNested=true) you used to deploy resources for this project.
